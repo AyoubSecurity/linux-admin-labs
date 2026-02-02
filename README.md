@@ -69,3 +69,39 @@ All reports are provided as **PDF overviews** written in LaTeX.
 
 ## Repository Structure
 
+linux-admin-labs/
+├── LabA1/
+├── LabA2/
+├── LabA3/
+├── LabA4/
+├── LabA5/
+├── LabA6/
+├── LabA7/
+└── README.md
+
+
+Each lab directory contains:
+- Compiled PDF overview
+- Commands and results used during execution
+
+---
+
+## Goal
+
+This repository documents a **progressive Linux administration learning path**, moving from fundamentals to **security-hardened, enterprise-ready system management**, suitable for:
+- Linux system administrators
+- Network engineers
+- Cybersecurity engineers
+- SOC / Blue Team preparation
+
+---
+
+## Next Labs (Planned)
+
+- Lab A8 – Advanced firewalld and zones
+- Lab A9 – User and service hardening
+- Lab A10 – Cron, timers, and automation
+- Lab A11 – Backup and recovery
+- Lab A12 – System hardening checklist
+
+---
