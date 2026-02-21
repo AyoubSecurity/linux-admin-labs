@@ -115,10 +115,8 @@ linux-admin-labs/
 ├── Lab-A6/
 ├── Lab-A7/
 ├── Lab-A8/
-│ ├── Lab_A8_Ansible_Foundations.pdf
-│ ├── Lab_A8_Ansible_Foundations.tex
-│ └── README.md
 └── README.md
+
 
 
 Each lab directory contains:
