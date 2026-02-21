@@ -118,15 +118,6 @@ linux-admin-labs/
 └── README.md
 
 
-
-Each lab directory contains:
-- Compiled LaTeX PDF report
-- Structured command execution
-- Validation results
-- Enterprise-focused documentation
-
----
-
 ## Roadmap (Next Phases)
 
 ### Phase 1 – Ansible Automation (A9–A12)
