@@ -1,107 +1,191 @@
-# Linux System Administration Labs
+# Linux System Administration & Security Labs (RHEL-Based)
 
-Hands-on Linux system administration labs designed to build **real-world Linux, security, and enterprise administration skills**, with a strong focus on **RHEL-based environments**.
+Hands-on Linux system administration labs designed to build **enterprise-grade Linux, security, and automation skills** using a structured learning path based on **Red Hat Enterprise Linux (RHEL)**.
 
-Each lab is documented with:
-- Clear objectives
-- Step-by-step commands
-- Configuration explanations
-- Verification outputs
-- Security and administration insights  
-All reports are provided as **PDF overviews** written in LaTeX.
+This repository documents a progressive journey from core administration fundamentals to **automation, system hardening, container security, and incident response readiness**.
+
+All labs are written and documented in a professional format and provided as **PDF reports generated with LaTeX**.
+
+---
+
+## Learning Philosophy
+
+This project follows a structured methodology:
+
+- Real-world, enterprise-oriented configurations
+- Security-first mindset
+- Explicit command execution and validation
+- Clear separation between control nodes and managed systems
+- Infrastructure as code using Ansible
+- Documentation suitable for professional portfolios
+
+The goal is not only to learn Linux — but to build **resume-ready, production-oriented skills**.
 
 ---
 
 ## Skills Covered
 
-- Linux user and group management
-- Filesystems, storage, and permissions
-- Privilege escalation and sudo control
-- Network configuration and services
-- Firewall configuration and hardening
-- SELinux concepts and enforcement
-- System logging and auditing
-- Security-oriented system administration
+### Core Linux Administration
+- User and group management
+- Filesystems and storage management
+- Permissions and ownership control
+- Privilege delegation using sudo
+- Service management (`systemctl`)
+- Network configuration and inspection
+
+### Security & Hardening
+- Firewall configuration with `firewalld`
+- SSH access control
+- SELinux modes, contexts, and policy troubleshooting
+- Logging and auditing with `journalctl` and `auditd`
+- Security-oriented configuration validation
+
+### Automation & Infrastructure as Code
+- Ansible control node setup
+- SSH key-based automation
+- Multi-host inventory configuration
+- Privilege escalation with `become`
+- Structured Ansible project layout
+- Execution logging for traceability
 
 ---
 
 ## Labs Completed
 
-- **Lab A1 – Users & Groups**
-  - User and group creation
-  - UID/GID management
-  - Account policies
+### **Lab A1 – Users & Groups**
+- User and group creation
+- UID/GID concepts
+- Account lifecycle basics
 
-- **Lab A2 – Disk Partitioning & Filesystems**
-  - Partitioning with `fdisk`
-  - Filesystem creation and mounting
-  - Persistent mounts (`/etc/fstab`)
+### **Lab A2 – Disk Partitioning & Filesystems**
+- Disk identification
+- Partitioning with `fdisk`
+- Filesystem creation and mounting
+- Persistent mounts with `/etc/fstab`
 
-- **Lab A3 – Permissions & Ownership**
-  - File and directory permissions
-  - Ownership and group control
-  - Special permissions (SUID, SGID, Sticky bit)
+### **Lab A3 – Permissions & Ownership**
+- File and directory permissions
+- Ownership and group management
+- Special permissions (SUID, SGID, Sticky bit)
 
-- **Lab A4 – sudo Privileges**
-  - Sudoers configuration
-  - Privilege delegation
-  - Security implications of sudo access
+### **Lab A4 – sudo Privileges**
+- Sudoers configuration
+- Least privilege delegation
+- Security considerations for administrative access
 
-- **Lab A5 – Network Configuration & Firewall Basics**
-  - Network interface inspection
-  - Service management with `systemctl`
-  - Firewall configuration using `firewalld`
-  - Securing SSH access
+### **Lab A5 – Networking & firewalld**
+- Network interface inspection
+- Service management
+- Firewall configuration and rule management
+- Securing SSH service
 
-- **Lab A6 – SELinux Basics and Apache Context Management**
-  - SELinux concepts and modes
-  - Contexts, types, and labels
-  - Troubleshooting access denials
-  - Allowing Apache to serve content securely using SELinux
+### **Lab A6 – SELinux Enforcement**
+- SELinux modes (Enforcing, Permissive)
+- Contexts and labels
+- Troubleshooting access denials
+- Secure Apache content serving under SELinux
 
-- **Lab A7 – System Logging and Auditing**
-  - System logs and `journalctl`
-  - Log persistence and filtering
-  - Audit framework basics
-  - Tracking security-relevant system events
+### **Lab A7 – Logging & Auditing**
+- `journalctl` usage and filtering
+- Persistent logging
+- Audit framework fundamentals
+- Tracking security-relevant system activity
+
+### **Lab A8 – Ansible Foundations**
+- Ansible installation on control node
+- SSH key-based authentication
+- Multi-host inventory configuration
+- Privilege escalation with sudo (`become`)
+- Project-based Ansible configuration
+- Logging and execution validation
+- Managing:
+  - `localhost`
+  - Remote RHEL server (192.168.1.19)
 
 ---
 
 ## Repository Structure
 
 linux-admin-labs/
-├── LabA1/
-├── LabA2/
-├── LabA3/
-├── LabA4/
-├── LabA5/
-├── LabA6/
-├── LabA7/
+├── Lab-A1/
+├── Lab-A2/
+├── Lab-A3/
+├── Lab-A4/
+├── Lab-A5/
+├── Lab-A6/
+├── Lab-A7/
+├── Lab-A8/
+│ ├── Lab_A8_Ansible_Foundations.pdf
+│ ├── Lab_A8_Ansible_Foundations.tex
+│ └── README.md
 └── README.md
 
 
 Each lab directory contains:
-- Compiled PDF overview
-- Commands and results used during execution
+- Compiled LaTeX PDF report
+- Structured command execution
+- Validation results
+- Enterprise-focused documentation
 
 ---
 
-## Goal
+## Roadmap (Next Phases)
 
-This repository documents a **progressive Linux administration learning path**, moving from fundamentals to **security-hardened, enterprise-ready system management**, suitable for:
-- Linux system administrators
-- Network engineers
-- Cybersecurity engineers
-- SOC / Blue Team preparation
+### Phase 1 – Ansible Automation (A9–A12)
+- Ad-hoc commands and fact gathering
+- Playbooks and idempotent configuration
+- Roles and reusable automation structure
+- Secure secret management with Ansible Vault
+
+### Phase 2 – System Hardening & Visibility (A13–A15)
+- SSH hardening and authentication control
+- Kernel and sysctl security tuning
+- Centralized logging concepts
+- Baseline security enforcement
+
+### Phase 3 – Reliability & Storage (A16–A18)
+- LVM and snapshots
+- Backup automation strategies
+- Systemd advanced service control
+
+### Phase 4 – Containers & Isolation (A19–A20)
+- Podman containers on RHEL
+- Rootless container security
+- SELinux with containers
+- Firewall isolation strategies
+
+### Final Phase – Incident Awareness & Capstone
+- Log triage and suspicious activity detection
+- Service persistence investigation
+- Infrastructure automation + hardening final project
 
 ---
 
-## Next Labs (Planned)
+## Long-Term Objective
 
-- Lab A8 – Advanced firewalld and zones
-- Lab A9 – User and service hardening
-- Lab A10 – Cron, timers, and automation
-- Lab A11 – Backup and recovery
-- Lab A12 – System hardening checklist
+This repository represents a structured path toward becoming:
+
+- Enterprise Linux System Administrator
+- Security-focused Infrastructure Engineer
+- DevSecOps-ready Automation Engineer
+- SOC / Blue Team oriented Linux specialist
+
+The final objective is to demonstrate the ability to build:
+
+- Automated
+- Hardened
+- Audited
+- Documented
+- Reproducible
+
+Linux infrastructure in a production-oriented manner.
 
 ---
+
+## Author
+
+**Ayoub Zouargui**  
+Master 1 – Networks and Embedded Systems  
+University of Algiers 1  
+Academic Year: 2025–2026  
+GitHub: https://github.com/AyoubSecurity
